@@ -1,0 +1,27 @@
+---
+layout: base.njk
+---
+
+<article class="blog-post">
+  <h1>{{ title }}</h1>
+  <div class="post-meta">
+    Published on {{ date | dateDisplay }}
+    {% if tags %}
+      <span class="tags">
+        {% for tag in tags %}
+          {% if tag != "post" %}
+            <span class="tag">#{{ tag }}</span>
+          {% endif %}
+        {% endfor %}
+      </span>
+    {% endif %}
+  </div>
+
+  <div class="post-content">
+    {{ content | safe }}
+  </div>
+
+  <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--cream); text-align: center;">
+    <a href="/blog" class="button">← Back to Blog</a>
+  </div>
+</article>

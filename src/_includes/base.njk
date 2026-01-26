@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title or "Commerce On Tap - Shopify & E-commerce Solutions" }}</title>
+  <meta name="description" content="{{ description or 'Shopify consulting, B2B solutions, and e-commerce systems integration. Based in the Bay Area.' }}">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  {% include "header.njk" %}
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  {% include "footer.njk" %}
+</body>
+</html>

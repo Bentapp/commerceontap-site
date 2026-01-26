@@ -1,0 +1,16 @@
+{
+  "name": "commerceontap-site",
+  "version": "1.0.0",
+  "description": "Commerce On Tap - Shopify consulting and e-commerce solutions",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "keywords": ["shopify", "ecommerce", "consulting"],
+  "author": "Ben Tappe",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
