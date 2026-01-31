@@ -119,15 +119,16 @@ p {
 /* ============================================
    Header & Navigation
    ============================================ */
-.site-header {
-  background: var(--primary-bg);
-  padding: var(--spacing-md) 0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(10px);
-}
+   .site-header {
+    background: rgba(255, 255, 255, 0.08); /* Very subtle white overlay */
+    padding: var(--spacing-md) 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(19, 61, 56, 0.2);
+    backdrop-filter: blur(20px); /* Stronger blur for glass effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
 
 .nav {
   display: flex;
@@ -277,12 +278,14 @@ p {
 }
 
 .service-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 248, 245, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(19, 61, 56, 0.08) 100%);
   padding: var(--spacing-lg);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 32px 0 rgba(19, 61, 56, 0.15);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(232, 139, 168, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   position: relative;
   overflow: hidden;
 }
@@ -311,20 +314,20 @@ p {
 }
 
 .service-card h3 {
-  color: var(--primary-bg);
+  color: rgba(250, 248, 245, 0.98);
   margin-bottom: var(--spacing-sm);
   font-size: 1.65rem;
 }
 
 .service-card h4 {
-  color: var(--primary-bg);
+  color: rgba(250, 248, 245, 0.95);
   margin-top: var(--spacing-md);
   margin-bottom: var(--spacing-sm);
   font-size: 1.1rem;
 }
 
 .service-card p {
-  color: var(--text-secondary);
+  color: rgba(250, 248, 245, 0.90);
   font-size: 1.05rem;
 }
 
@@ -336,7 +339,7 @@ p {
 
 .service-card li {
   padding: var(--spacing-xs) 0;
-  color: var(--text-secondary);
+  color: rgba(250, 248, 245, 0.88);
   position: relative;
   padding-left: 1.75rem;
   font-size: 1rem;
@@ -346,7 +349,7 @@ p {
   content: "→";
   position: absolute;
   left: 0;
-  color: var(--soft-pink);
+  color: rgba(232, 139, 168, 1);
   font-weight: 700;
   font-size: 1.2rem;
 }
@@ -357,18 +360,38 @@ p {
 .about-content {
   max-width: 900px;
   margin: 0 auto;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 248, 245, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(19, 61, 56, 0.08) 100%);
   padding: var(--spacing-xl);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  border: 1px solid rgba(232, 139, 168, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(19, 61, 56, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.about-content h2 {
+  color: rgba(250, 248, 245, 0.98);
+  margin-bottom: var(--spacing-sm);
+}
+
+.about-content h3 {
+  color: rgba(250, 248, 245, 0.95);
 }
 
 .about-content p {
   font-size: 1.15rem;
   margin-bottom: var(--spacing-md);
-  color: var(--text-secondary);
+  color: rgba(250, 248, 245, 0.90);
   line-height: 1.8;
+}
+
+.about-content a {
+  color: rgba(232, 139, 168, 1);
+  font-weight: 600;
+}
+
+.about-content a:hover {
+  color: rgba(232, 139, 168, 0.8);
 }
 
 /* ============================================
@@ -382,12 +405,14 @@ p {
 }
 
 .blog-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 248, 245, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(19, 61, 56, 0.08) 100%);
   padding: var(--spacing-lg);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 8px 32px 0 rgba(19, 61, 56, 0.15);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(232, 139, 168, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .blog-card:hover {
@@ -397,34 +422,34 @@ p {
 }
 
 .blog-card h3 {
-  color: var(--primary-bg);
+  color: rgba(250, 248, 245, 0.98);
   margin-bottom: var(--spacing-xs);
   font-size: 1.5rem;
 }
 
 .blog-card h3 a {
-  color: var(--primary-bg);
+  color: rgba(250, 248, 245, 0.98);
 }
 
 .blog-card h3 a:hover {
-  color: var(--soft-pink);
+  color: rgba(232, 139, 168, 1);
 }
 
 .blog-meta {
   font-size: 0.95rem;
-  color: var(--text-secondary);
+  color: rgba(250, 248, 245, 0.75);
   margin-bottom: var(--spacing-sm);
   font-weight: 500;
 }
 
 .blog-excerpt {
-  color: var(--text-secondary);
+  color: rgba(250, 248, 245, 0.90);
   margin-bottom: var(--spacing-sm);
   font-size: 1.05rem;
 }
 
 .read-more {
-  color: var(--soft-pink);
+  color: rgba(232, 139, 168, 1);
   font-weight: 600;
   font-size: 1.05rem;
 }
@@ -438,18 +463,21 @@ p {
   max-width: 850px;
   margin: 0 auto;
   padding: var(--spacing-xl) var(--spacing-md);
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 248, 245, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(19, 61, 56, 0.08) 100%);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 8px 32px 0 rgba(19, 61, 56, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .blog-post h1 {
-  color: var(--primary-bg);
+  color: rgba(250, 248, 245, 0.98);
   margin-bottom: var(--spacing-sm);
 }
 
 .blog-post .post-meta {
-  color: var(--text-secondary);
+  color: rgba(250, 248, 245, 0.75);
   margin-bottom: var(--spacing-lg);
   padding-bottom: var(--spacing-md);
   border-bottom: 2px solid rgba(232, 139, 168, 0.2);
@@ -462,17 +490,17 @@ p {
 
 .blog-post .post-content h2 {
   margin-top: var(--spacing-lg);
-  color: var(--primary-bg);
+  color: rgba(250, 248, 245, 0.98);
 }
 
 .blog-post .post-content h3 {
   margin-top: var(--spacing-md);
-  color: var(--primary-bg);
+  color: rgba(250, 248, 245, 0.95);
 }
 
 .blog-post .post-content p {
   font-size: 1.1rem;
-  color: var(--text-secondary);
+  color: rgba(250, 248, 245, 0.90);
 }
 
 .blog-post .post-content ul,
@@ -483,7 +511,7 @@ p {
 
 .blog-post .post-content li {
   margin-bottom: var(--spacing-xs);
-  color: var(--text-secondary);
+  color: rgba(250, 248, 245, 0.88);
 }
 
 /* ============================================
@@ -495,11 +523,13 @@ p {
 }
 
 .contact-form {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 248, 245, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(19, 61, 56, 0.08) 100%);
   padding: var(--spacing-xl);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  border: 1px solid rgba(232, 139, 168, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(19, 61, 56, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .form-group {
@@ -510,7 +540,7 @@ p {
   display: block;
   margin-bottom: var(--spacing-xs);
   font-weight: 600;
-  color: var(--text-primary);
+  color: rgba(250, 248, 245, 0.98);
   font-size: 1.05rem;
 }
 
@@ -582,8 +612,8 @@ p {
 
 .footer-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--spacing-lg);
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xxl);
   margin-bottom: var(--spacing-lg);
 }
 
